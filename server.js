@@ -21,14 +21,21 @@ app.get("/tables", (req, res) => {
 app.get("/reserve", (req, res) => {
     res.sendFile(path.join(__dirname, "reservation.html"));
 });
+
 app.get("/api/waitlist", (req, res) => {
+
+});
+app.get("/api/tables", (req, res) => {
+
+});
+app.post("/api/waitlist", (req, res) => {
     var newTable = req.body;
     // newCharacter.routeName = newCharacter.name.replace(/\s+/g, "").toLowerCase();
     console.log(newTable);
     tables.push(newTable);
     res.json(newTable);
 });
-app.get("/api/tables", (req, res) => {
+app.post("/api/tables", (req, res) => {
     var newTable = req.body;
     // newCharacter.routeName = newCharacter.name.replace(/\s+/g, "").toLowerCase();
     console.log(newTable);
