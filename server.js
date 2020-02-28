@@ -23,10 +23,10 @@ app.get("/reserve", (req, res) => {
 });
 
 app.get("/api/waitlist", (req, res) => {
-
+    return res.json(waitlist)
 });
 app.get("/api/tables", (req, res) => {
-
+    return res.json(tables)
 });
 app.post("/api/waitlist", (req, res) => {
     var newTable = req.body;
